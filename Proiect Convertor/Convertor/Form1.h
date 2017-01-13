@@ -329,14 +329,14 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 
 private: System::Void btn_convert_lungime_Click(System::Object^  sender, System::EventArgs^  e) {
 			 double input, output;
-			 //ce introducem si ce afisam
+			 
 
 			  int selectedIn = Lungime_in->SelectedIndex;
 			  int selectedOut = lungime_out->SelectedIndex;
-			  //luam indexul selectiei
+			  
 
 			   if((selectedIn==-1 && selectedOut==-1) || selectedIn== -1 || selectedOut == -1){
-//daca selectia este goala, indexul returnat este -1
+
 				 MessageBox::Show("Nu ati selectat ambele unitati de masura!");
 			 }
 			   else
@@ -468,14 +468,13 @@ private: System::Void btn_convert_lungime_Click(System::Object^  sender, System:
 
 
 					   double input, output;
-			 //ce introducem si ce afisam
+			 
 
 			  int selectedIn = combo_arie_in->SelectedIndex;
 			  int selectedOut = combo_arie_out->SelectedIndex;
-			  //luam indexul selectiei
+			
 
 			   if((selectedIn==-1 && selectedOut==-1) || selectedIn== -1 || selectedOut == -1){
-//daca selectia este goala, indexul returnat este -1
 				 MessageBox::Show("Nu ati selectat ambele unitati de masura!");
 			 }
 			   else
@@ -496,7 +495,6 @@ private: System::Void btn_convert_lungime_Click(System::Object^  sender, System:
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==3)
 					 output = input*0.15499070055796654;
-				 // output.setPrecision(3);
 					txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==4)
 					 output = input*0.0001195989394042597;
@@ -508,94 +506,95 @@ private: System::Void btn_convert_lungime_Click(System::Object^  sender, System:
 			 case 1:
 				
 				 if(selectedOut==0)
-					 output = input*100;
+					 output = input*10000;
 				  txt_arie_out->Text=  Convert::ToString(output);
 
 				 if(selectedOut==2)
-					 output = input*1000;
+					 output = input*0.000001;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==3)
-					 output = input*1600;
+					 output = input*1549.907005;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==4)
-					 output = input*3.28083;
+					 output = input*10.76426264;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				   if(selectedOut==5)
-					 output = input*0.000621371192;
+					 output = input*1.19598939404;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				 break;
 				  case 2:				
 				 if(selectedOut==0)
-					 output = input*100000;
+					 output = input*10000000000;
 				  txt_arie_out->Text=  Convert::ToString(output);
 
 				 if(selectedOut==1)
-					 output = input*1000;
+					 output = input/0.000001;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==3)
-					 output = input/1.6;
+					 output = input*1550003100;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==4)
-					 output = input*3280.84;
+					 output = input*10763910.4;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				   if(selectedOut==5)
-					 output = input*1093.6133333333;
+					 output = input*1195990.05;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				 break;
 
 				 case 3:				
 				 if(selectedOut==0)
-					 output = input*160000;
+					 output = input*6.4516;
 				  txt_arie_out->Text=  Convert::ToString(output);
 
 				 if(selectedOut==1)
-					 output = input*1600;
+					 output = input*0.00064516;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==2)
-					 output = input/1.6;
+					 output = input*0.00000000064516;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==4)
-					 output = input*5280;
+					 output = input*0.00694444444;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				   if(selectedOut==5)
-					 output = input*1760;
+					 output = input*0.000771604938;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				 break;
+
 				  case 4:				
 				 if(selectedOut==0)
-					 output = input*30.48;
+					 output = input*929.0304;
 				  txt_arie_out->Text=  Convert::ToString(output);
 
 				 if(selectedOut==1)
-					 output = input*0.3048;
+					 output = input*0.09290304;
 				 txt_output_lungime->Text=  Convert::ToString(output);
 				  if(selectedOut==2)
-					 output = input*0.0003048;
+					 output = input*0.00000009290304;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==3)
-					 output = input*0.00018939;
+					 output = input*144;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				   if(selectedOut==5)
-					 output = input*0.3333332424176393;
+					 output = input*0.111111111;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				 break;
 
 				  case 5:				
 				 if(selectedOut==0)
-					 output = input*91.44002494;
+					 output = input*8361.2736;
 				  txt_arie_out->Text=  Convert::ToString(output);
 
 				 if(selectedOut==1)
-					 output = input*0.9144002494;
+					 output = input*0.83612736;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				  if(selectedOut==2)
-					 output = input*0.0009144002494;
+					 output = input*0.00000083612736;
 				 txt_output_lungime->Text=  Convert::ToString(output);
 				  if(selectedOut==3)
-					 output = input*0.0005681819731517935;
+					 output = input*1296;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				   if(selectedOut==4)
-					 output = input*3.0000008182414697;
+					 output = input*9;
 				  txt_arie_out->Text=  Convert::ToString(output);
 				 break;
 			 }
@@ -613,23 +612,56 @@ private: System::Void btn_convert_temp_Click(System::Object^  sender, System::Ev
 
 			 
 					   double input, output;
-			 //ce introducem si ce afisam
+			 
 
 			  int selectedIn = combo_temp_in->SelectedIndex;
 			  int selectedOut = combo_temp_out->SelectedIndex;
-			  //luam indexul selectiei
+			  
 
 			   if((selectedIn==-1 && selectedOut==-1) || selectedIn== -1 || selectedOut == -1){
-//daca selectia este goala, indexul returnat este -1
+
 				 MessageBox::Show("Nu ati selectat ambele unitati de masura!");
 			 }
 			   else
 			 if(selectedIn==selectedOut){
 				 MessageBox::Show("Va rog nu selectati aceeasi unitate de masura!");
-			 }	
+			 }
+		
 			 input=0;
 			 input=System::Convert::ToDouble ( txt_temp_in->Text );
 
+			  switch(selectedIn){
+			 case 0:
+				 if(selectedOut==1)
+					 output = (input*1.8) + 32;
+				 txt_temp_out->Text=  Convert::ToString(output);
+
+				 if(selectedOut==2)
+					 output = input+273.15;
+				  txt_temp_out->Text=  Convert::ToString(output);
+				
+				 break;
+
+				 case 1:
+				 if(selectedOut==0)
+					 output = (input-32)/1.8;
+				 txt_temp_out->Text=  Convert::ToString(output);
+
+				 if(selectedOut==2)
+					 output = input*9/5-459.67;
+				  txt_temp_out->Text=  Convert::ToString(output);
+			     break;
+
+				 case 2:
+				 if(selectedOut==0)
+					 output =input-273.15;
+				 txt_temp_out->Text=  Convert::ToString(output);
+
+				 if(selectedOut==1)
+					 output = (input+459.67)*(5/9);
+				  txt_temp_out->Text=  Convert::ToString(output);
+				 break;
+			  }
 		 }
 };
 		 
