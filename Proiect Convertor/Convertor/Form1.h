@@ -76,6 +76,8 @@ namespace Convertor {
 	private: System::Windows::Forms::ComboBox^  combo_masa_out;
 	private: System::Windows::Forms::TextBox^  txt_masa_out;
 	private: System::Windows::Forms::Button^  btn_convert_masa;
+	private: System::Windows::Forms::TextBox^  textBox2;
+
 
 
 	protected: 
@@ -134,6 +136,7 @@ namespace Convertor {
 			this->combo_masa_out = (gcnew System::Windows::Forms::ComboBox());
 			this->txt_masa_out = (gcnew System::Windows::Forms::TextBox());
 			this->btn_convert_masa = (gcnew System::Windows::Forms::Button());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// btn_viteza
@@ -148,7 +151,7 @@ namespace Convertor {
 			// 
 			// txt_input_lungime
 			// 
-			this->txt_input_lungime->Location = System::Drawing::Point(109, 41);
+			this->txt_input_lungime->Location = System::Drawing::Point(109, 95);
 			this->txt_input_lungime->Name = L"txt_input_lungime";
 			this->txt_input_lungime->Size = System::Drawing::Size(100, 20);
 			this->txt_input_lungime->TabIndex = 1;
@@ -156,7 +159,7 @@ namespace Convertor {
 			// 
 			// txt_output_lungime
 			// 
-			this->txt_output_lungime->Location = System::Drawing::Point(466, 39);
+			this->txt_output_lungime->Location = System::Drawing::Point(466, 94);
 			this->txt_output_lungime->Name = L"txt_output_lungime";
 			this->txt_output_lungime->ReadOnly = true;
 			this->txt_output_lungime->Size = System::Drawing::Size(100, 20);
@@ -167,7 +170,7 @@ namespace Convertor {
 			this->Lungime_in->FormattingEnabled = true;
 			this->Lungime_in->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"Centimetri", L"Metri", L"Kilometri", L"Mile", 
 				L"Picioare", L"Yarzi"});
-			this->Lungime_in->Location = System::Drawing::Point(228, 40);
+			this->Lungime_in->Location = System::Drawing::Point(228, 94);
 			this->Lungime_in->Name = L"Lungime_in";
 			this->Lungime_in->Size = System::Drawing::Size(121, 21);
 			this->Lungime_in->TabIndex = 3;
@@ -178,14 +181,14 @@ namespace Convertor {
 			this->lungime_out->FormattingEnabled = true;
 			this->lungime_out->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"Centimetri", L"Metri", L"Kilometri", L"Mile", 
 				L"Picioare", L"Yarzi"});
-			this->lungime_out->Location = System::Drawing::Point(594, 39);
+			this->lungime_out->Location = System::Drawing::Point(594, 90);
 			this->lungime_out->Name = L"lungime_out";
 			this->lungime_out->Size = System::Drawing::Size(121, 21);
 			this->lungime_out->TabIndex = 4;
 			// 
 			// btn_convert_lungime
 			// 
-			this->btn_convert_lungime->Location = System::Drawing::Point(369, 38);
+			this->btn_convert_lungime->Location = System::Drawing::Point(369, 94);
 			this->btn_convert_lungime->Name = L"btn_convert_lungime";
 			this->btn_convert_lungime->Size = System::Drawing::Size(75, 23);
 			this->btn_convert_lungime->TabIndex = 5;
@@ -196,7 +199,7 @@ namespace Convertor {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(37, 48);
+			this->label1->Location = System::Drawing::Point(34, 98);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(47, 13);
 			this->label1->TabIndex = 6;
@@ -204,7 +207,7 @@ namespace Convertor {
 			// 
 			// btn_convert_arie
 			// 
-			this->btn_convert_arie->Location = System::Drawing::Point(369, 116);
+			this->btn_convert_arie->Location = System::Drawing::Point(369, 154);
 			this->btn_convert_arie->Name = L"btn_convert_arie";
 			this->btn_convert_arie->Size = System::Drawing::Size(75, 23);
 			this->btn_convert_arie->TabIndex = 7;
@@ -215,7 +218,7 @@ namespace Convertor {
 			// Arie
 			// 
 			this->Arie->AutoSize = true;
-			this->Arie->Location = System::Drawing::Point(37, 126);
+			this->Arie->Location = System::Drawing::Point(34, 164);
 			this->Arie->Name = L"Arie";
 			this->Arie->Size = System::Drawing::Size(25, 13);
 			this->Arie->TabIndex = 8;
@@ -223,7 +226,7 @@ namespace Convertor {
 			// 
 			// txt_arie_input
 			// 
-			this->txt_arie_input->Location = System::Drawing::Point(109, 119);
+			this->txt_arie_input->Location = System::Drawing::Point(109, 157);
 			this->txt_arie_input->Name = L"txt_arie_input";
 			this->txt_arie_input->Size = System::Drawing::Size(100, 20);
 			this->txt_arie_input->TabIndex = 9;
@@ -231,7 +234,7 @@ namespace Convertor {
 			// 
 			// txt_arie_out
 			// 
-			this->txt_arie_out->Location = System::Drawing::Point(466, 116);
+			this->txt_arie_out->Location = System::Drawing::Point(466, 157);
 			this->txt_arie_out->Name = L"txt_arie_out";
 			this->txt_arie_out->ReadOnly = true;
 			this->txt_arie_out->Size = System::Drawing::Size(100, 20);
@@ -241,7 +244,7 @@ namespace Convertor {
 			// 
 			this->combo_arie_in->FormattingEnabled = true;
 			this->combo_arie_in->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"Cm2", L"m2", L"km2", L"In2", L"ft2", L"yd2"});
-			this->combo_arie_in->Location = System::Drawing::Point(228, 118);
+			this->combo_arie_in->Location = System::Drawing::Point(228, 156);
 			this->combo_arie_in->Name = L"combo_arie_in";
 			this->combo_arie_in->Size = System::Drawing::Size(121, 21);
 			this->combo_arie_in->TabIndex = 11;
@@ -250,7 +253,7 @@ namespace Convertor {
 			// 
 			this->combo_arie_out->FormattingEnabled = true;
 			this->combo_arie_out->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"Cm2", L"m2", L"km2", L"In2", L"ft2", L"yd2"});
-			this->combo_arie_out->Location = System::Drawing::Point(594, 115);
+			this->combo_arie_out->Location = System::Drawing::Point(594, 156);
 			this->combo_arie_out->Name = L"combo_arie_out";
 			this->combo_arie_out->Size = System::Drawing::Size(121, 21);
 			this->combo_arie_out->TabIndex = 12;
@@ -258,7 +261,7 @@ namespace Convertor {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(34, 196);
+			this->label2->Location = System::Drawing::Point(34, 236);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(67, 13);
 			this->label2->TabIndex = 13;
@@ -267,7 +270,7 @@ namespace Convertor {
 			// 
 			// txt_temp_in
 			// 
-			this->txt_temp_in->Location = System::Drawing::Point(109, 189);
+			this->txt_temp_in->Location = System::Drawing::Point(109, 229);
 			this->txt_temp_in->Name = L"txt_temp_in";
 			this->txt_temp_in->Size = System::Drawing::Size(100, 20);
 			this->txt_temp_in->TabIndex = 14;
@@ -275,7 +278,7 @@ namespace Convertor {
 			// 
 			// txt_temp_out
 			// 
-			this->txt_temp_out->Location = System::Drawing::Point(466, 189);
+			this->txt_temp_out->Location = System::Drawing::Point(466, 228);
 			this->txt_temp_out->Name = L"txt_temp_out";
 			this->txt_temp_out->ReadOnly = true;
 			this->txt_temp_out->Size = System::Drawing::Size(100, 20);
@@ -285,7 +288,7 @@ namespace Convertor {
 			// 
 			this->combo_temp_in->FormattingEnabled = true;
 			this->combo_temp_in->Items->AddRange(gcnew cli::array< System::Object^  >(3) {L"°C", L"°F", L" K"});
-			this->combo_temp_in->Location = System::Drawing::Point(228, 188);
+			this->combo_temp_in->Location = System::Drawing::Point(228, 228);
 			this->combo_temp_in->Name = L"combo_temp_in";
 			this->combo_temp_in->Size = System::Drawing::Size(121, 21);
 			this->combo_temp_in->TabIndex = 16;
@@ -294,14 +297,14 @@ namespace Convertor {
 			// 
 			this->combo_temp_out->FormattingEnabled = true;
 			this->combo_temp_out->Items->AddRange(gcnew cli::array< System::Object^  >(3) {L"°C", L"°F", L" K"});
-			this->combo_temp_out->Location = System::Drawing::Point(594, 189);
+			this->combo_temp_out->Location = System::Drawing::Point(594, 229);
 			this->combo_temp_out->Name = L"combo_temp_out";
 			this->combo_temp_out->Size = System::Drawing::Size(121, 21);
 			this->combo_temp_out->TabIndex = 17;
 			// 
 			// btn_convert_temp
 			// 
-			this->btn_convert_temp->Location = System::Drawing::Point(369, 186);
+			this->btn_convert_temp->Location = System::Drawing::Point(369, 226);
 			this->btn_convert_temp->Name = L"btn_convert_temp";
 			this->btn_convert_temp->Size = System::Drawing::Size(75, 23);
 			this->btn_convert_temp->TabIndex = 18;
@@ -312,7 +315,7 @@ namespace Convertor {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(34, 270);
+			this->label3->Location = System::Drawing::Point(34, 295);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(30, 13);
 			this->label3->TabIndex = 19;
@@ -320,7 +323,7 @@ namespace Convertor {
 			// 
 			// txt_timp_in
 			// 
-			this->txt_timp_in->Location = System::Drawing::Point(109, 263);
+			this->txt_timp_in->Location = System::Drawing::Point(109, 288);
 			this->txt_timp_in->Name = L"txt_timp_in";
 			this->txt_timp_in->Size = System::Drawing::Size(100, 20);
 			this->txt_timp_in->TabIndex = 20;
@@ -330,14 +333,14 @@ namespace Convertor {
 			// 
 			this->combo_timp_in->FormattingEnabled = true;
 			this->combo_timp_in->Items->AddRange(gcnew cli::array< System::Object^  >(4) {L"Secunde", L"Minute", L"Ore", L"Zile"});
-			this->combo_timp_in->Location = System::Drawing::Point(228, 262);
+			this->combo_timp_in->Location = System::Drawing::Point(228, 287);
 			this->combo_timp_in->Name = L"combo_timp_in";
 			this->combo_timp_in->Size = System::Drawing::Size(121, 21);
 			this->combo_timp_in->TabIndex = 21;
 			// 
 			// btn_convert_timp
 			// 
-			this->btn_convert_timp->Location = System::Drawing::Point(369, 260);
+			this->btn_convert_timp->Location = System::Drawing::Point(369, 285);
 			this->btn_convert_timp->Name = L"btn_convert_timp";
 			this->btn_convert_timp->Size = System::Drawing::Size(75, 23);
 			this->btn_convert_timp->TabIndex = 22;
@@ -347,7 +350,7 @@ namespace Convertor {
 			// 
 			// txt_timp_out
 			// 
-			this->txt_timp_out->Location = System::Drawing::Point(466, 263);
+			this->txt_timp_out->Location = System::Drawing::Point(466, 288);
 			this->txt_timp_out->Name = L"txt_timp_out";
 			this->txt_timp_out->ReadOnly = true;
 			this->txt_timp_out->Size = System::Drawing::Size(100, 20);
@@ -357,7 +360,7 @@ namespace Convertor {
 			// 
 			this->combo_timp_out->FormattingEnabled = true;
 			this->combo_timp_out->Items->AddRange(gcnew cli::array< System::Object^  >(4) {L"Secunde", L"Minute", L"Ore", L"Zile"});
-			this->combo_timp_out->Location = System::Drawing::Point(594, 263);
+			this->combo_timp_out->Location = System::Drawing::Point(594, 288);
 			this->combo_timp_out->Name = L"combo_timp_out";
 			this->combo_timp_out->Size = System::Drawing::Size(121, 21);
 			this->combo_timp_out->TabIndex = 24;
@@ -365,7 +368,7 @@ namespace Convertor {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(34, 336);
+			this->label4->Location = System::Drawing::Point(34, 360);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(33, 13);
 			this->label4->TabIndex = 25;
@@ -373,7 +376,7 @@ namespace Convertor {
 			// 
 			// txt_masa_in
 			// 
-			this->txt_masa_in->Location = System::Drawing::Point(109, 329);
+			this->txt_masa_in->Location = System::Drawing::Point(109, 353);
 			this->txt_masa_in->Name = L"txt_masa_in";
 			this->txt_masa_in->Size = System::Drawing::Size(100, 20);
 			this->txt_masa_in->TabIndex = 26;
@@ -383,7 +386,7 @@ namespace Convertor {
 			// 
 			this->combo_masa_in->FormattingEnabled = true;
 			this->combo_masa_in->Items->AddRange(gcnew cli::array< System::Object^  >(4) {L"Miligrame", L"Grame", L"Kilograme", L"Tone"});
-			this->combo_masa_in->Location = System::Drawing::Point(228, 328);
+			this->combo_masa_in->Location = System::Drawing::Point(228, 352);
 			this->combo_masa_in->Name = L"combo_masa_in";
 			this->combo_masa_in->Size = System::Drawing::Size(121, 21);
 			this->combo_masa_in->TabIndex = 27;
@@ -392,14 +395,14 @@ namespace Convertor {
 			// 
 			this->combo_masa_out->FormattingEnabled = true;
 			this->combo_masa_out->Items->AddRange(gcnew cli::array< System::Object^  >(4) {L"Miligrame", L"Grame", L"Kilograme", L"Tone"});
-			this->combo_masa_out->Location = System::Drawing::Point(594, 328);
+			this->combo_masa_out->Location = System::Drawing::Point(594, 352);
 			this->combo_masa_out->Name = L"combo_masa_out";
 			this->combo_masa_out->Size = System::Drawing::Size(121, 21);
 			this->combo_masa_out->TabIndex = 28;
 			// 
 			// txt_masa_out
 			// 
-			this->txt_masa_out->Location = System::Drawing::Point(466, 328);
+			this->txt_masa_out->Location = System::Drawing::Point(466, 353);
 			this->txt_masa_out->Name = L"txt_masa_out";
 			this->txt_masa_out->ReadOnly = true;
 			this->txt_masa_out->Size = System::Drawing::Size(100, 20);
@@ -407,7 +410,7 @@ namespace Convertor {
 			// 
 			// btn_convert_masa
 			// 
-			this->btn_convert_masa->Location = System::Drawing::Point(369, 326);
+			this->btn_convert_masa->Location = System::Drawing::Point(369, 350);
 			this->btn_convert_masa->Name = L"btn_convert_masa";
 			this->btn_convert_masa->Size = System::Drawing::Size(75, 23);
 			this->btn_convert_masa->TabIndex = 30;
@@ -415,11 +418,25 @@ namespace Convertor {
 			this->btn_convert_masa->UseVisualStyleBackColor = true;
 			this->btn_convert_masa->Click += gcnew System::EventHandler(this, &Form1::btn_convert_masa_Click);
 			// 
+			// textBox2
+			// 
+			this->textBox2->BackColor = System::Drawing::SystemColors::Control;
+			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Arial", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(238)));
+			this->textBox2->Location = System::Drawing::Point(347, 25);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(140, 25);
+			this->textBox2->TabIndex = 32;
+			this->textBox2->Text = L"CONVERTOR";
+			this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
 			// Form1
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->ClientSize = System::Drawing::Size(792, 447);
 			this->ControlBox = false;
+			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->btn_convert_masa);
 			this->Controls->Add(this->txt_masa_out);
 			this->Controls->Add(this->combo_masa_out);
